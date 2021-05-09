@@ -148,7 +148,7 @@ module.exports = ({emailFrom, download, size, expires}) => {
                             <tr>
                             <td class="content-block" style="font-family: sans-serif; vertical-align: top; padding-bottom: 10px; padding-top: 10px; font-size: 12px; color: #999999; text-align: center;">
                                 <span class="apple-link" style="color: #999999; font-size: 12px; text-align: center;">RoughShare inc. main street 29, Moscow</span>
-                                <br> Want to share a file? <a href="http://localhost:3000" style="text-decoration: underline; color: #999999; font-size: 12px; text-align: center;">RoughShare</a>.
+                                <br> Want to share a file? <a href="${process.env.APP_BASE_URL}" style="text-decoration: underline; color: #999999; font-size: 12px; text-align: center;">RoughShare</a>.
                             </td>
                             </tr>
                             <tr>
