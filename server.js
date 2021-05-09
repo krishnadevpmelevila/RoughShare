@@ -10,11 +10,12 @@ connectDB();
 const corsOptions = {
 	orgin:process.env.ALLOWED_CLIENTS.split(',')
 }
-app.get('*', function (req, res) {
-	if(!req.secure){
-	res.redirect('https://' + req.headers.host + req.url);
-}
-})
+app.use(function(req, res, next) {
+	if(!req.secure) {
+	  return res.redirect(['https://', req.get('Host'), req.url].join(''));
+	}
+	next();
+});
 app.use(cors(corsOptions));
 app.set('views', path.join(__dirname, '/views'));
 app.set('view engine', 'ejs');
