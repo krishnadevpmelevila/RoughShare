@@ -1,3 +1,4 @@
+
 const dropZone = document.querySelector(".drop-zone");
 const fileInput = document.querySelector("#fileInput");
 const browseBtn = document.querySelector("#browseBtn");
@@ -15,7 +16,7 @@ const emailForm = document.querySelector("#emailForm");
 
 const toast = document.querySelector(".toast");
 
-const baseURL = process.env.APP_BASE_URL;
+const baseURL = "http://localhost:3000";
 const uploadURL = `${baseURL}/api/files`;
 const emailURL = `${baseURL}/api/files/send`;
 
@@ -24,6 +25,7 @@ const maxAllowedSize = 100 * 1024 * 1024; //100mb
 
 browseBtn.addEventListener("click", () => {
   fileInput.click();
+  
 });
 
 dropZone.addEventListener("drop", (e) => {
